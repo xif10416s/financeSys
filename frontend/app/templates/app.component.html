@@ -1,0 +1,27 @@
+<h1 >{{title}}</h1>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [myHighlight]="color" >This highlight..</p>
+<p [myHighlight]="color" [defaultColor]="'violet'">
+    Highlight me too!
+</p>
+<hr/>
+<nav>
+    <a [routerLink]="['Dashboard']">Dashboard</a>
+    <a [routerLink]="['Heroes']">Heroes</a>
+    <hr>
+    <a [routerLink]="['Mdcheckbox']">Mdcheckbox</a>
+</nav>
+<router-outlet></router-outlet>
+<hr/>
+<hero-form></hero-form>
+<hr/>
+<login-form></login-form>
+<hr/>
+<div>
+    <h2>Job Application for Heroes</h2>
+    <dynamic-form [questions]="questions"></dynamic-form>
+</div>
