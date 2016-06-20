@@ -1,0 +1,10 @@
+#init
+npm install
+npm run typings install
+npm install --save @angular2-material/{core,button,checkbox,sidenav}
+#start
+npm start
+
+#npm cmd
+npm install XX --save
+npm uninstall
