@@ -1,1 +1,931 @@
-<admin-side-nav></admin-side-nav>
+<div class="wrapper preload">
+    <div class="sidebar-right">
+        <div class="sidebar-inner scrollable-sidebar">
+            <div class="sidebar-header clearfix">
+                <input class="form-control dark-input" placeholder="搜索" type="text">
+                <div class="btn-group pull-right">
+                    <a href="#" class="sidebar-setting" data-toggle="dropdown"><i class="fa fa-bars fa-lg"></i></a>
+                    <ul class="dropdown-menu pull-right flipInV">
+                        <li><a href="#">在线客服</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="title-block">
+                客服
+            </div>
+            <div class="content-block">
+                <ul class="sidebar-list">
+                    <li>
+                        <a href="#" class="clearfix">
+                            <img src="app/resources/images/001.png" class="img-circle" alt="user avatar">
+                            <div class="chat-detail m-left-sm">
+                                <div class="chat-name">
+                                    小妹
+                                </div>
+                                <div class="chat-message">
+                                    Hi~
+                                </div>
+                            </div>
+                            <div class="chat-status">
+                                <i class="fa fa-circle-o text-success"></i>
+                            </div>
+                            <div class="chat-alert">
+                                <span class="badge badge-info bounceIn animation-delay2">1</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title-block">
+                公告
+            </div>
+            <div class="content-block">
+                <ul class="sidebar-list">
+                    <li>
+                        <a href="#" class="clearfix">
+                            <span class="badge badge-info m-right-xs">未读</span>鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            text
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            text
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- sidebar-inner -->
+    </div><!-- sidebar-right -->
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <div class="nav-header">
+                <!--手机下的菜单button-->
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <ul class="nav-notification pull-right">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-lg"></i></a>
+                        <span class="badge badge-danger bounceIn">1</span>
+                        <ul class="dropdown-menu dropdown-sm pull-right user-dropdown">
+                            <li class="user-avatar">
+                                <img src="../resources/images/001.png" alt="" class="img-circle">
+                                <div class="user-content">
+                                    <h5 class="no-m-bottom">USERNAME</h5>
+                                    <div class="m-top-xs">
+                                        <a href="#" class="m-right-sm">编辑</a>
+                                        <a href="#">退出</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    管理
+                                    <span class="badge badge-info bounceIn animation-delay2 pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    消息
+                                    <span class="badge badge-danger bounceIn animation-delay3 pull-right">2</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">设置</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="#" class="brand">
+                    <span class="brand-name">惠锁屏</span>广告平台
+                </a>
+            </div>
+            <div class="nav-container">
+                <!--正常宽度下的button-->
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav-notification">
+                    <!--
+                                                <li class="search-list">
+                                                    <div class="search-input-wrapper">
+                                                        <div class="search-input">
+                                                            <input type="text" class="form-control input-sm inline-block">
+                                                            <a href="#" class="input-icon text-normal"><i class="ion-ios7-search-strong"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                    -->
+                </ul>
+                <div class="pull-right m-right-sm">
+                    <div class="user-block hidden-xs">
+                        <a href="#" id="userToggle" data-toggle="dropdown">
+                            <img src="../resources/images/001.png" alt="" class="img-circle inline-block user-profile-pic">
+                            <div class="user-detail inline-block">
+                                USERNAME
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="panel border dropdown-menu user-panel">
+                            <div class="panel-body paddingTB-sm">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-edit fa-lg"></i><span class="m-left-xs">资料编辑</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-inbox fa-lg"></i><span class="m-left-xs">广告管理</span>
+                                            <span class="badge badge-danger bounceIn animation-delay3">2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">退出</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav-notification">
+                        <li>
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i></a>
+                            <span class="badge badge-info bounceIn animation-delay6 active">3</span>
+                            <ul class="dropdown-menu notification dropdown-3 pull-right">
+                                <li><a style="text-align:right">3条待处理消息</a></li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-warning">
+													<i class="fa fa-warning"></i>
+												</span>
+                                        <span class="m-left-xs">未通过审核</span>
+                                        <span class="time text-muted">2小时前</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-warning">
+													<i class="fa fa-warning"></i>
+												</span>
+                                        <span class="m-left-xs">xxx即将到期</span>
+                                        <span class="time text-muted">2小时前</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-success">
+													<i class="fa fa-usd"></i>
+												</span>
+                                        <span class="m-left-xs">xxx进入推广期</span>
+                                        <span class="time text-muted">昨天</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--
+                                                        <li class="chat-notification">
+                                                            <a href="#" class="sidebarRight-toggle"><i class="fa fa-comments fa-lg"></i></a>
+                                                            <span class="badge badge-danger bounceIn">1</span>
+
+                                                            <div class="chat-alert">
+                                                                新消息(1)
+                                                            </div>
+                                                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </div><!-- ./top-nav-inner -->
+    </header>
+    <aside class="sidebar-menu fixed">
+        <div class="sidebar-inner scrollable-sidebar">
+            <div class="main-menu">
+                <ul class="accordion">
+                    <li class="menu-header">
+                        Main Menu
+                    </li>
+                    <li class="bg-palette1 active">
+                        <a >
+                            带active效果的li菜单名称长度测试测试测试测试测试测试
+                        </a>
+                    </li>
+                    <li class="openable bg-palette1">
+                        <a >
+                            菜单2
+                            <span class="submenu-icon"></span>
+                        </a>
+                        <ul class="submenu bg-palette1">
+                            <li><a ><span class="submenu-label">下级1</span></a></li>
+                            <li><a ><span class="submenu-label">下级1</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="openable bg-palette1">
+                        <a href="#">
+                            菜单3
+                            <span class="submenu-icon"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#"><span class="submenu-label">下级1</span></a></li>
+                            <li><a href="#"><span class="submenu-label">下级1</span></a></li>
+                            <li class="openable">
+                                <a href="#">
+                                    <small class="badge badge-success badge-square bounceIn animation-delay2 m-left-xs pull-right">2</small>
+                                    <span class="submenu-label">下级1</span>
+                                </a>
+                                <ul class="submenu third-level">
+                                    <li><a href="#"><span class="submenu-label">展开2，不要了注释掉。</span></a></li>
+                                    <li><a href="#"><span class="submenu-label">展开2</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="bg-palette1">
+                        <a href="#">
+                            菜单菜单菜单4
+                            <!--									<small class="badge badge-warning badge-square bounceIn animation-delay6 m-left-xs pull-right">7</small>-->
+                        </a>
+                    </li>
+                    <li class="bg-palette2">
+                        <a href="#">菜单B</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-fix-bottom clearfix">
+                <div class="user-dropdown dropup pull-left">
+                    <a href="#" class="dropdwon-toggle font-18" data-toggle="dropdown"><i class="ion-person-add"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                Inbox
+                                <span class="badge badge-danger bounceIn animation-delay2 pull-right">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Notification
+                                <span class="badge badge-purple bounceIn animation-delay3 pull-right">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebarRight-toggle">
+                                Message
+                                <span class="badge badge-success bounceIn animation-delay4 pull-right">7</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="pull-right font-18"><i class="ion-log-out"></i></a>
+            </div>
+        </div><!-- sidebar-inner -->
+    </aside>
+
+    <div class="main-container">
+        <div class="padding-md">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        标题/欢迎/感谢使用
+                    </div>
+                    <div class="page-sub-header">
+                        <i class="fa fa-map-marker text-danger"></i>广告主公司名称
+                    </div>
+                </div>
+
+                <div class="col-sm-6 text-right text-left-sm p-top-sm">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            快捷菜单<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">Project1</a></li>
+                            <li><a href="#">Project2</a></li>
+                            <li><a href="#">Project3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Setting</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-default"><i class="fa fa-cog"></i></a>
+                </div>
+
+            </div>
+
+            <div class="row m-top-md">
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-danger m-bottom-md">
+                        <div class="statistic-title">
+                            总广告数
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#">12</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-info m-bottom-md">
+                        <div class="statistic-title">
+                            投放计划
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#">5</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-ios7-cart-outline"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-purple m-bottom-md">
+                        <div class="statistic-title">
+                            当日预算
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#">30,000</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-stats-bars"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-warning m-bottom-md">
+                        <div class="statistic-title">
+                            账户余额
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#">20万</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-calculator"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-primary m-bottom-md">
+                        <div class="statistic-title">
+                            累计充值
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#">30万</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-filing"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4">
+                    <div class="statistic-box bg-success m-bottom-md">
+                        <div class="statistic-title">
+                            上次操作
+                        </div>
+                        <div class="statistic-value">
+                            <a href="#" class="font-12">12.11.11 12:00</a>
+                        </div>
+                        <div class="statistic-icon-background">
+                            <i class="ion-person-add"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 面包屑 -->
+            <ul class="breadcrumb">
+                <li><span class="primary-font"><i class="icon-home"></i></span><a href="#">breadcrumb</a></li>
+                <li>link</li>
+                <li>link</li>
+            </ul><!-- ./breadcrumb -->
+
+            <!-- 页码 -->
+            <div class="pagination-row clearfix">
+                <div class="pull-left vertical-middle hidden-xs">text</div>
+                <div class="pull-right pull-left-sm">
+                    <div class="inline-block vertical-middle m-right-xs">Page 1 of 8 </div>
+                    <ul class="pagination vertical-middle">
+                        <li class="disabled"><a href="#"><i class="fa fa-step-backward"></i></a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-caret-left large"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#"><i class="fa fa-caret-right large"></i></a></li>
+                        <li><a href="#"><i class="fa fa-step-forward"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- ./pagination-row -->
+
+            <!-- 警告 -->
+            <div class="alert alert-info alert-custom marginTB-sm">
+                <i class="fa fa-warning"></i><span class="m-left-xs">error？？？警告/未保存/信息错误</span>
+            </div><!-- ./info -->
+
+            <!-- 表格1 -->
+            <table class="table table-striped" id="dataTable">
+                <thead>
+                <tr>
+                    <th>流水号</th>
+                    <th>创建日期</th>
+                    <th>审核日期</th>
+                    <th>金额</th>
+                    <th>状态</th>
+                    <th>发票</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>#100001</td>
+                    <td>2011.12.21</td>
+                    <td>2011.12.21</td>
+                    <td>1,870</td>
+                    <td>充值成功</td>
+                    <td><span class="label label-danger">处理中</span></td>
+                </tr>
+                <tr>
+                    <td>#100002</td>
+                    <td>2011.12.21</td>
+                    <td>2011.12.21</td>
+                    <td>1,870</td>
+                    <td>充值成功</td>
+                    <td><span class="label label-danger">处理中</span></td>
+                </tr>
+                <tr>
+                    <td>#100003</td>
+                    <td>2011.12.21</td>
+                    <td>2011.12.21</td>
+                    <td>1,870</td>
+                    <td>充值成功</td>
+                    <td><a href="#">申请发票</a></td>
+                </tr>
+                <tr>
+                    <td>#100004</td>
+                    <td>2011.12.21</td>
+                    <td>2011.12.21</td>
+                    <td>1,870</td>
+                    <td>充值成功</td>
+                    <td>已发送</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- 表格2 -->
+            <div class="smart-widget">
+                <div class="smart-widget-header">
+                    表格
+							<span class="smart-widget-option">
+                                <a href="#">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+	                            <a href="#">
+                                    <i class="fa fa-refresh"></i>
+                                </a>
+	                            <a href="#">
+                                    <i class="fa fa-times"></i>
+                                </a>
+	                        </span>
+                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <th>ABC</th>
+                                <td>121212</td>
+                                <td>121212</td>
+                                <td>121212</td>
+                            </tr>
+                            <tr>
+                                <th>ABC</th>
+                                <td>121212</td>
+                                <td>121212</td>
+                                <td>121212</td>
+                            </tr>
+                            <tr>
+                                <th>ABC</th>
+                                <td>121212</td>
+                                <td>121212</td>
+                                <td>121212</td>
+                            </tr>
+                            <tr>
+                                <th>ABC</th>
+                                <td>121212</td>
+                                <td>121212</td>
+                                <td>121212</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- ./smart-widget-inner -->
+            </div><!-- ./smart-widget -->
+
+            <!-- TAB/TITLE/LINK -->
+            <div class="gallery-filter marginTB-sm">
+                <ul class="clearfix">
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">已投放</a></li>
+                    <li><a href="#">到期</a></li>
+                    <li><a href="#">计划</a></li>
+                </ul>
+            </div><!-- ./tab -->
+
+            <!-- 信息1 -->
+            <div class="smart-widget">
+                <div class="smart-widget-header">
+                    唯品会
+                    <span class="m-left-sm font-12 text-muted">12323423423423423424</span>
+                            <span class="smart-widget-option">
+								<a href="#">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-times"></i>
+                                </a>
+	                        </span>
+                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body block">
+                        <span class="m-right-md">单价<b class="badge badge-info">3</b></span>
+                        <span class="m-right-md">每日限额<b class="badge badge-info">2</b></span>
+                        <span class="m-right-md">累计消费<b class="badge badge-info">1</b></span>
+                        <span class="m-right-md">投放<b class="badge">？</b></span>
+                        <span class="m-right-md">展示<b class="badge badge-warning">33</b>次</span>
+                        <span class="m-right-md">点击<b class="badge badge-warning">33</b>次</span>
+                        <span class="m-right-md">下载<b class="badge badge-warning">11222</b>次</span>
+                        <div class="right">
+                            <button type="button" class="btn btn-default btn-sm" id="">初始化</button>
+                            <button type="button" class="btn btn-danger btn-sm" id="">上线</button>
+                            <button type="button" class="btn btn-primary btn-sm" id="">停止</button>
+                            <button type="button" class="btn btn-info btn-sm" id="">详情</button>
+                        </div>
+                        <p class="marginTB-sm">text</p>
+                    </div>
+                </div><!-- ./smart-widget-inner -->
+            </div><!-- ./smart-widget -->
+
+            <!-- 信息2 -->
+            <div class="smart-widget">
+                <div class="smart-widget-header">
+                    唯品会
+                    <span class="m-left-sm font-12 text-muted">12323423423423423424</span>
+                    <div class="right">
+                        <button type="button" class="btn btn-default btn-sm" id="">初始化</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="">上线</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="">停止</button>
+                        <button type="button" class="btn btn-info btn-sm" id="">详情</button>
+                    </div>
+                </div>
+                <div class="smart-widget-inner table-responsive">
+                    <table class="table table-striped no-margin text-right">
+                        <thead>
+                        <tr>
+                            <th class="text-right">单价</th>
+                            <th class="text-right">每日限额</th>
+                            <th class="text-right">累计</th>
+                            <th class="text-right">投放</th>
+                            <th class="text-right">展示</th>
+                            <th class="text-right">点击</th>
+                            <th class="text-right">下载</th>
+                            <th class="text-right">日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>122</td>
+                            <td>333</td>
+                            <td>4444</td>
+                            <td>1111次</td>
+                            <td>11次</td>
+                            <td>1111次</td>
+                            <td>2012.12.12~2015.12.12</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- ./smart-widget-inner -->
+            </div><!-- ./smart-widget -->
+
+            <!-- 表单 -->
+            <div class="smart-widget">
+                <div class="smart-widget-header">
+                    表单
+                    <div class="right">
+                        <button type="button" class="btn btn-default btn-sm" id="">保存</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="">提交</button>
+                    </div>
+                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body">
+                        <form id="formToggleLine" class="form-horizontal no-margin form-border">
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">项目</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" placeholder="输入">
+                                    <span class="help-block">帮助</span>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">禁用</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" placeholder="禁用" disabled>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">密码</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="password" placeholder="密码">
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">静态</label>
+                                <div class="col-lg-10">
+                                    <p class="form-control-static">静态</p>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">文本</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" rows="3">123</textarea>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">多选</label>
+                                <div class="col-lg-10">
+                                    <div class="checkbox">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="Checkbox1" class="checkbox-grey">
+                                            <label for="Checkbox1"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">
+                                            loooooooooong1
+                                        </div>
+                                    </div>
+                                    <div class="checkbox inline-block m-right-sm">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="Checkbox2" class="checkbox-grey" checked>
+                                            <label for="Checkbox2"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">
+                                            short2
+                                        </div>
+                                    </div>
+                                    <div class="checkbox inline-block m-right-sm">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="Checkbox3" class="checkbox-grey" checked>
+                                            <label for="Checkbox3"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">
+                                            short3
+                                        </div>
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">单选</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <div class="custom-radio m-right-xs">
+                                            <input type="radio" id="radio1" name="Radio">
+                                            <label for="radio1"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">
+                                            looooooog1
+                                        </div>
+                                    </div>
+                                    <div class="radio inline-block">
+                                        <div class="custom-radio m-right-xs">
+                                            <input type="radio" id="radio2" name="Radio">
+                                            <label for="radio2"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">short2</div>
+                                    </div>
+                                    <div class="radio inline-block">
+                                        <div class="custom-radio m-right-xs">
+                                            <input type="radio" id="radio3" name="Radio">
+                                            <label for="radio3"></label>
+                                        </div>
+                                        <div class="inline-block vertical-top">short3</div>
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group has-error">
+                                <label class="col-lg-2 control-label">输入错误</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text">
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">选择</label>
+                                <div class="col-lg-10">
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">多选</label>
+                                <div class="col-lg-10">
+                                    <select multiple class="select2 width-100">
+                                        <optgroup label="A">
+                                            <option value="A1">A1</option>
+                                            <option value="A2">A2</option>
+                                        </optgroup>
+                                        <optgroup label="B">
+                                            <option value="B1">B1</option>
+                                            <option value="B2">B2</option>
+                                        </optgroup>
+                                    </select>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">小格</label>
+                                <div class="col-lg-10">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <input type="text" class="form-control" placeholder=".col-lg-2">
+                                        </div><!-- /.col -->
+                                        <div class="col-lg-3">
+                                            <input type="text" class="form-control" placeholder=".col-lg-3">
+                                        </div><!-- /.col -->
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" placeholder=".col-lg-4">
+                                        </div><!-- /.col -->
+                                    </div><!-- /.row -->
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">其他</label>
+                                <div class="col-lg-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div><!-- /input-group -->
+                                    <div class="seperator"></div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">¥</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon">.00</span>
+                                    </div><!-- /input-group -->
+                                    <div class="seperator"></div>
+                                    <div class="input-group">
+                                        <input type="text" value="08/10/2014" class="datepicker-input form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div><!-- /input-group -->
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">按钮</label>
+                                <div class="col-lg-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button">提交</button>
+												</span>
+                                    </div><!-- /input-group -->
+                                    <div class="seperator"></div>
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉<span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">4</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                        <input type="text" class="form-control">
+                                    </div><!-- /input-group -->
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">上传文件</label>
+                                <div class="col-lg-10">
+                                    <input type="file">
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">TAGS</label>
+                                <div class="col-lg-10">
+                                    <input type="text" id="tagsExample" value="one,two,three">
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                            <div class="form-group">
+                                <div class="col-lg-1 right">
+                                    <a href="#" class="btn btn-danger">提交</a>
+                                </div><!-- /.col -->
+                            </div><!-- /form-group -->
+
+                        </form>
+                    </div>
+                </div><!-- ./smart-widget-inner -->
+            </div><!-- ./smart-widget -->
+
+            <!-- 文本+TAB -->
+            <div class="smart-widget">
+                <div class="smart-widget-inner">
+                    <ul class="nav nav-tabs tab-style2">
+                        <li class="active">
+                            <a href="#style2Tab1" data-toggle="tab">
+                                <span class="text-wrapper">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#style2Tab2" data-toggle="tab">
+                                <span class="text-wrapper">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#style2Tab3" data-toggle="tab">
+                                <span class="text-wrapper">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#style2Tab4" data-toggle="tab">
+                                <span class="text-wrapper">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="smart-widget-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="style2Tab1">
+                                <div class="block h4">title1</div>
+                                <p class="m-top-sm">text1</p>
+                            </div><!-- ./tab-pane -->
+                            <div class="tab-pane fade" id="style2Tab2">
+                                <div class="block h4"><strong>title2</strong></div>
+                                <p class="m-top-sm">text2</p>
+                            </div><!-- ./tab-pane -->
+                            <div class="tab-pane fade" id="style2Tab3">
+                                <div class="block h4"><strong>title3</strong></div>
+                                <p class="m-top-sm">text3</p>
+                            </div><!-- ./tab-pane -->
+                            <div class="tab-pane fade" id="style2Tab4">
+                                <div class="block h4"><strong>title4</strong></div>
+                                <p class="m-top-sm">鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开鲜花会在你的白骨上盛开</p>
+                            </div><!-- ./tab-pane -->
+                        </div><!-- ./tab-content -->
+                    </div>
+                </div>
+            </div><!-- ./smart-widget -->
+
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <footer class="footer">
+				<span class="footer-brand">
+					<strong class="text-danger">惠</strong>锁屏
+				</span>
+        <p class="no-margin">
+            &copy; 2016 <strong>上海花事</strong>. ALL Rights Reserved.<a href="#" class="font-12">链接</a><a href="#" class="font-12">链接</a>
+        </p>
+    </footer>
+</div><!-- /wrapper -->
+
+<script>
+    alert($('#sidebarToggleLG').click)
+    $('#sidebarToggleLG').click(function()	{
+
+    })
+</script>
+
