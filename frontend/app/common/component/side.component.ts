@@ -1,7 +1,7 @@
 import { Component ,provide,Inject,OpaqueToken}       from '@angular/core';
 import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //===
-
+import {ViewItem} from '../model/ViewItem'
 
 @Component({
     selector: 'smp-side',
@@ -12,7 +12,6 @@ import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 export class SideComponent {
     constructor(private router:Router) {
         console.log("-----")
-        console.log(router.toLocaleString)
     }
 
     views = [{
@@ -25,20 +24,6 @@ export class SideComponent {
         subview: [{'title': 'topic21', 'path': '/product'}, {'title': 'topic22', 'path': 'product'}]
     }]
 
-
-    onFirstLinkClick($event){
-        console.log("onclick..........."+$event.target)
-        if(!$('aside').hasClass('sidebar-mini') || Modernizr.mq('(max-width: 991px)'))	{
-            if( $($event.target).parent().children('.submenu').is(':hidden') ) {
-                $($event.target).parent().siblings().removeClass('open').children('.submenu').slideUp(200);
-                $($event.target).parent().addClass('open').children('.submenu').slideDown(200);
-            }
-            else	{
-                $($event.target).parent().removeClass('open').children('.submenu').slideUp(200);
-            }
-        }
-        return false;
-    }
 
     onSubItemViewClick(v:ViewItem) {
         console.log("----onClick-"+v.path)

@@ -12,7 +12,6 @@ import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 export class TemplateComponent {
     constructor(private router:Router) {
         console.log("-----")
-        console.log(router.toLocaleString)
     }
 
 }

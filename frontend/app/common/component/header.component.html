@@ -2,7 +2,10 @@
     <div class="top-nav-inner">
         <div class="nav-header">
             <!--手机下的菜单button-->
-            <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM" (click)="onSidebarToggleSM()">
+            <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM" onclick="{
+        $('aside').toggleClass('active');
+        $('.wrapper').toggleClass('display-left');
+    }">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -13,7 +16,7 @@
                     <span class="badge badge-danger bounceIn">1</span>
                     <ul class="dropdown-menu dropdown-sm pull-right user-dropdown">
                         <li class="user-avatar">
-                            <img src="../resources/images/001.png" alt="" class="img-circle">
+                            <img src="app/resources/images/001.png" alt="" class="img-circle">
                             <div class="user-content">
                                 <h5 class="no-m-bottom">USERNAME</h5>
                                 <div class="m-top-xs">
@@ -48,7 +51,22 @@
         </div>
         <div class="nav-container">
             <!--正常宽度下的button-->
-            <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG" (click)="onSidebarToggleLG()">
+            <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG" onclick="{
+        if($('.wrapper').hasClass('display-right'))	{
+            $('.wrapper').removeClass('display-right');
+            $('.sidebar-right').removeClass('active');
+        }
+        else	{
+            //$('.nav-header').toggleClass('hide');
+            $('.top-nav').toggleClass('sidebar-mini');
+            $('aside').toggleClass('sidebar-mini');
+            $('footer').toggleClass('sidebar-mini');
+            $('.main-container').toggleClass('sidebar-mini');
+
+            $('.main-menu').find('.openable').removeClass('open');
+            $('.main-menu').find('.submenu').removeAttr('style');
+        }
+    }">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -56,7 +74,7 @@
             <div class="pull-right m-right-sm">
                 <div class="user-block hidden-xs">
                     <a href="#" id="userToggle" data-toggle="dropdown">
-                        <img src="../resources/images/001.png" alt="" class="img-circle inline-block user-profile-pic">
+                        <img src="app/resources/images/001.png" alt="" class="img-circle inline-block user-profile-pic">
                         <div class="user-detail inline-block">
                             USERNAME
                             <i class="fa fa-angle-down"></i>
