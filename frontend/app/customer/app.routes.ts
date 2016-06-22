@@ -1,19 +1,10 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 //===
-import {AccountComponent} from './account/account.component'
-import {ProductComponent} from './product/product.component'
 import {TemplateComponent} from '../common/component/template-container.component'
 
 export const routes:RouterConfig = [
-    {
-        path: 'account',
-        component: AccountComponent
-    },
-    {
-        path: 'product',
-        component: ProductComponent
-    },{
-        path: 'admin.html',
+   {
+        path: '',
         component: TemplateComponent
     }
 ];

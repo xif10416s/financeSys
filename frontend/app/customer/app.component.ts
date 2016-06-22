@@ -1,21 +1,20 @@
 import { Component ,provide,Inject,OpaqueToken}       from '@angular/core';
-
-
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
+//==========
+import {HeaderComponent} from '../common/component/header.component'
+import {SideComponent} from '../common/component/side.component'
 @Component({
     selector: 'my-app',
-    template: '<h1>{{title}}</h1>',
-    styleUrls: ['app/style/app.component.css']
+    templateUrl: 'app/customer/app.component.html',
+    styleUrls: ['app/customer/app.component.css'],
+    directives: [SideComponent,HeaderComponent,ROUTER_DIRECTIVES]
 })
 
-@RouteConfig([
-
-])
 
 export class AppComponent {
     title
     constructor() {
-        this.title = 'customer....'
+        this.title = 'admin....'
     }
 
 }

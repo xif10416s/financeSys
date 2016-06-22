@@ -2,10 +2,21 @@
 <head>
     <title>Angular 2 QuickStart</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app/style/styles.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app/style/forms.css">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <meta name="author" content="#">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 框架 -->
+    <link href="app/resources/css/font-awesome.min.css" rel="stylesheet">
+    <!-- ionicons 框架-->
+    <link href="app/resources/css/ionicons.min.css" rel="stylesheet">
+    <!-- Simplify 主要CSS -->
+    <link href="app/resources/css/simplify.css" rel="stylesheet">
+
+
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
@@ -17,14 +28,24 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function(err){ console.error(err);  });
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
     </script>
 
-    <base href="/">
 </head>
-
+<base href=".">
 <!-- 3. Display the application -->
 <body>
 <my-app>Loading...</my-app>
 </body>
+<!-- Jquery -->
+<script src="app/resources/js/jquery-1.11.1.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap -->
+<!-- Slimscroll -->
+<script src='app/resources/js/jquery.slimscroll.min.js'></script>
+<!-- Simplify -->
+<script src="app/resources/js/simplify/simplify.js"></script>
+<script src="app/resources/js/simplify/simplify_dashboard.js"></script>
 </html>
