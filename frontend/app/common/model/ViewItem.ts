@@ -1,4 +1,4 @@
-export class ViewItem {
+export interface ViewItem {
     title:string;
     path:string;
     role:string[];

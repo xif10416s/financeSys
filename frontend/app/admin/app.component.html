@@ -1,4 +1,7 @@
-<div class="wrapper preload">
+<div *ngIf="authUser == null">
+    <smp-login [authUser]="loginAuthUser"></smp-login>
+</div>
+<div  *ngIf="authUser != null" class="wrapper preload">
     <smp-header></smp-header>
     <smp-side></smp-side>
     <router-outlet></router-outlet>
