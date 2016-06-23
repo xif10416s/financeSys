@@ -5,7 +5,7 @@ import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 
 @Component({
     selector: 'smp-header',
-    templateUrl: 'app/common/component/header.component.html',
+    templateUrl: 'app/customer/header.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
 

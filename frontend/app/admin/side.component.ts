@@ -1,11 +1,11 @@
 import { Component ,provide,Inject,OpaqueToken}       from '@angular/core';
 import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //===
-import {ViewItem} from '../model/ViewItem'
+import {ViewItem} from '../common/model/ViewItem'
 
 @Component({
     selector: 'smp-side',
-    templateUrl: 'app/common/component/side.component.html',
+    templateUrl: 'app/admin/side.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
 

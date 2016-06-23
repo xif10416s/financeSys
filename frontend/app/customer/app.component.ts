@@ -1,8 +1,8 @@
 import { Component ,provide,Inject,OpaqueToken}       from '@angular/core';
 import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //==========
-import {HeaderComponent} from '../common/component/header.component'
-import {SideComponent} from '../common/component/side.component'
+import {HeaderComponent} from './header.component'
+import {SideComponent} from './side.component'
 @Component({
     selector: 'my-app',
     templateUrl: 'app/customer/app.component.html',
