@@ -1,5 +1,5 @@
 <div *ngIf="authUser == null">
-    <smp-login [authUser]="loginAuthUser"></smp-login>
+    <smp-login [authUser]="loginAuthUser" (onLogin)="onLogin($event)"></smp-login>
 </div>
 <div  *ngIf="authUser != null" class="wrapper preload">
     <smp-header></smp-header>

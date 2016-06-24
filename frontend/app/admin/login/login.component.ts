@@ -1,4 +1,4 @@
-import { Component ,Input}       from '@angular/core';
+import { Component ,Input,Output,EventEmitter}       from '@angular/core';
 import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //===
 import {AuthUser} from '../../common/model/ResponseModels'
@@ -10,13 +10,15 @@ import {AuthUser} from '../../common/model/ResponseModels'
 
 export class LoginComponent {
     @Input() loginAuthUser:AuthUser;
+    @Output() onLogin = new EventEmitter();
     constructor(private router:Router) {
         console.log("-----")
     }
 
-    ontest(){
+    doLogin(){
         this.loginAuthUser ={id:'',email:'',roles:''}
-        alert(this.loginAuthUser)
+        console.log(this.loginAuthUser)
+        this.onLogin.emit(this.loginAuthUser)
     }
 
 }
