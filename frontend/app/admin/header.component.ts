@@ -11,7 +11,7 @@ import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 
 export class HeaderComponent {
     constructor(private router:Router) {
-        console.log("-----")
+        console.log("--HeaderComponent---")
     }
 
 }

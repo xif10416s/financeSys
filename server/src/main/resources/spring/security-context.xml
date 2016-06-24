@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- No Authentication Urls -->
+	<security:http pattern="resources" security="none"></security:http>
+	
+	<!-- 登录权限过滤 -->
+	<security:http pattern="/auth/**"
+		entry-point-ref="http403EntryPoint"
+		authentication-manager-ref="authManager">
+		<security:intercept-url pattern="/**" access="permitAll()" />
+		<security:custom-filter ref="loginFilter" position="FORM_LOGIN_FILTER"/>
+		<security:logout logout-url="/auth/logout"
+			logout-success-url="/auth/logout/success" />
+		<security:csrf disabled="true"/>
+		<security:access-denied-handler
+			error-page="/auth/access-denied" />
+	</security:http>
+
+	<!-- 业务请求过滤 -->
+	<security:http auto-config="true"
+		authentication-manager-ref="authManager">
+		<security:intercept-url pattern="/service/admin/**" access="hasRole('ROLE_USER') and hasRole('ROLE_ADMIN')"/>
+		<security:csrf disabled="true"/>
+		<security:access-denied-handler
+			error-page="/auth/access-denied" />
+	</security:http>
+
+	<!-- Authority management in memory -->
+	<!-- test
+	<security:authentication-manager id="authManager">
+		<security:authentication-provider>
+			<security:password-encoder ref="md5PasswordEncoder"/>
+			<security:user-service>
+				<security:user name="test" password="96e79218965eb72c92a549dd5a330112" authorities="ROLE_USER, ROLE_ADMIN" />
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+	-->
+	<!-- -->
+	<security:authentication-manager id="authManager">
+		<security:authentication-provider ref="authProvider"></security:authentication-provider>
+	</security:authentication-manager>
+
+	<bean id="rememberMeTokenRepo"
+		class="org.fxi.auth.service.impl.PersistentLoginServiceImpl">
+	</bean>
+	
+	<bean id="authProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="hideUserNotFoundExceptions" value="false"></property>
+		<property name="passwordEncoder" ref="md5PasswordEncoder"></property>
+		<property name="userDetailsService" ref="jdbcUserService"></property>
+	</bean>
+	<bean id="jdbcUserService"
+		class="org.springframework.security.provisioning.JdbcUserDetailsManager">
+		<property name="authoritiesByUsernameQuery" value="SELECT users.email, authority FROM users users LEFT OUTER JOIN user_authorities auths ON users.userId = auths.userId WHERE users.email = ?"></property>
+		<property name="usersByUsernameQuery" value="SELECT email, password, 1 FROM users WHERE email = ?"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	
+	<bean id="loginFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+		<property name="authenticationManager" ref="authManager" />
+		<property name="usernameParameter" value="email" />
+		<property name="passwordParameter" value="password" />
+		<property name="filterProcessesUrl" value="/auth/login"/>
+		<property name="authenticationSuccessHandler">
+			<bean class="org.fxi.auth.controller.LoginSuccessHandler"></bean>
+		</property>
+		<property name="authenticationFailureHandler">
+			<bean class="org.fxi.auth.controller.LoginFailureHandler"></bean>
+		</property>
+	</bean>
+	
+	<bean id="http403EntryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint" />
+
+	<bean id="md5PasswordEncoder"
+		  class="org.springframework.security.authentication.encoding.Md5PasswordEncoder">
+	</bean>
+
+</beans>

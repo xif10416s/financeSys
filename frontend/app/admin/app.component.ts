@@ -32,7 +32,6 @@ export class AppComponent implements OnInit{
     onLogin($event){
         console.log($event)
         this.authUser = $event
-        this.router.navigate(['',{}]);
     }
 
 }

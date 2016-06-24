@@ -11,7 +11,8 @@ import {ViewItem} from '../common/model/ViewItem'
 
 export class SideComponent {
     constructor(private router:Router) {
-        console.log("-----")
+        console.log("--SideComponent---")
+        this.router.navigate(['/admin.html',{}]);
     }
 
     views = [{

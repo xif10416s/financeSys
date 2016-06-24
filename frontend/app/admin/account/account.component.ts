@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 export class AccountComponent {
     constructor(private router:Router) {
-        console.log("-----")
+        console.log("---AccountComponent--")
         console.log(router.toLocaleString)
     }
 }

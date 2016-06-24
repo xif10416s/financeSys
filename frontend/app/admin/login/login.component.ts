@@ -12,7 +12,7 @@ export class LoginComponent {
     @Input() loginAuthUser:AuthUser;
     @Output() onLogin = new EventEmitter();
     constructor(private router:Router) {
-        console.log("-----")
+        console.log("--LoginComponent---")
     }
 
     doLogin(){
