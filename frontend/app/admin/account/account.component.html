@@ -1,3 +1,82 @@
 <div class="main-container">
-    <h1>My Content</h1>
+    <!-- 表单 -->
+    <div class="smart-widget">
+        <div class="smart-widget-header">
+            新建管理员账号
+            <div class="right">
+                <button type="button" class="btn btn-default btn-sm" id="">保存</button>
+                <button type="button" class="btn btn-danger btn-sm" id="">提交</button>
+            </div>
+        </div>
+        <div class="smart-widget-inner">
+            <div class="smart-widget-body">
+                <form id="formToggleLine" class="form-horizontal no-margin form-border" (ngSubmit)="addAdminUser()" #addAdminUserForm="ngForm">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">邮箱</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">密码</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" type="password" placeholder="密码">
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">手机号</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" type="text" placeholder="输入">
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">姓名</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" type="text" placeholder="输入">
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">权限选择</label>
+                        <div class="col-lg-10">
+                            <div class="checkbox inline-block m-right-sm">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="Checkbox1" class="checkbox-grey">
+                                    <label for="Checkbox1"></label>
+                                </div>
+                                <div class="inline-block vertical-top">
+                                    loooooooooong1
+                                </div>
+                            </div>
+                            <div class="checkbox inline-block m-right-sm">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="Checkbox2" class="checkbox-grey" checked>
+                                    <label for="Checkbox2"></label>
+                                </div>
+                                <div class="inline-block vertical-top">
+                                    short2
+                                </div>
+                            </div>
+                            <div class="checkbox inline-block m-right-sm">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="Checkbox3" class="checkbox-grey" checked>
+                                    <label for="Checkbox3"></label>
+                                </div>
+                                <div class="inline-block vertical-top">
+                                    short3
+                                </div>
+                            </div>
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+
+
+                    <div class="form-group">
+                        <div class="col-lg-1 right">
+                            <a href="#" class="btn btn-danger">提交</a>
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
+
+                </form>
+            </div>
+        </div><!-- ./smart-widget-inner -->
+    </div><!-- ./smart-widget -->
 </div>

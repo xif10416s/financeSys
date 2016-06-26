@@ -1,4 +1,8 @@
 <header class="top-nav">
+    <div id="progressBarDiv" class="progress progress-striped " hidden="true" style="height: 3px;top:0px;left: 0px; height: 5px;margin-bottom: 0px;">
+        <div class="progress-bar progress-bar-danger progress-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progressBar"  >
+        </div>
+    </div>
     <div class="top-nav-inner">
         <div class="nav-header">
             <!--手机下的菜单button-->
@@ -46,7 +50,7 @@
             </ul>
 
             <a href="#" class="brand">
-                <span class="brand-name">惠锁屏</span>广告平台
+                <span class="brand-name">惠锁屏{{progressing}}</span>广告平台
             </a>
         </div>
         <div class="nav-container">

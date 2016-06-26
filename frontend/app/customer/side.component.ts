@@ -1,7 +1,7 @@
 import { Component ,provide,Inject,OpaqueToken}       from '@angular/core';
 import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //===
-import {ViewItem} from '../common/model/ViewItem'
+import {ViewItem} from '../common/model/viewitem.model'
 
 @Component({
     selector: 'smp-side',

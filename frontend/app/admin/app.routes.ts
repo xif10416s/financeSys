@@ -6,7 +6,7 @@ import {TemplateComponent} from '../common/component/template-container.componen
 
 export const routes:RouterConfig = [
     {
-        path: 'account',
+        path: 'add-account',
         component: AccountComponent
     },
     {

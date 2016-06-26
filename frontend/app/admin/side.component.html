@@ -11,7 +11,7 @@
                     Main Menu
                 </li>
                 <li *ngFor="let v of views" class="openable bg-palette1">
-                    <a onclick="{
+                    <a *ngIf="hasAuth(v.role)"  onclick="{
         if(!$('aside').hasClass('sidebar-mini') || Modernizr.mq('(max-width: 991px)'))	{
             if( $(this).parent().children('.submenu').is(':hidden') ) {
                 $(this).parent().siblings().removeClass('open').children('.submenu').slideUp(200);
@@ -27,7 +27,7 @@
                         <span class="submenu-icon"></span>
                     </a>
                     <ul class="submenu bg-palette1">
-                        <li *ngFor="let sv of v.subview"><a (click)="onSubItemViewClick(sv)"><span
+                        <li  *ngFor="let sv of v.subview"><a *ngIf="hasAuth(sv.role)" (click)="onSubItemViewClick(sv)"><span
                                 class="submenu-label">{{sv.title}}</span></a></li>
                     </ul>
                 </li>

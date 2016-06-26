@@ -1,24 +1,47 @@
-import { Component ,Input,Output,EventEmitter}       from '@angular/core';
-import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
+import { Component ,Input,Output,EventEmitter,OnInit}       from '@angular/core';
+import { NgForm }    from '@angular/common';
 //===
-import {AuthUser} from '../../common/model/ResponseModels'
+import {AuthUser,AuthResponse,RespCode} from '../../common/model/response.model'
+import {LoginService} from './login.service'
+import { LoginInfo }    from './login.model';
+declare var $: any;
 @Component({
-    selector: 'smp-login',
-    templateUrl: 'app/admin/login/login.component.html',
-    directives: [ROUTER_DIRECTIVES]
+selector: 'smp-login',
+templateUrl: 'app/admin/login/login.component.html',
 })
 
-export class LoginComponent {
-    @Input() loginAuthUser:AuthUser;
+export class LoginComponent implements OnInit{
+    //@Input() loginAuthUser:AuthUser;
     @Output() onLogin = new EventEmitter();
-    constructor(private router:Router) {
+    submitted = false;
+    loginInfo:LoginInfo ;
+    errorMsg:string ;
+    constructor(private loginService: LoginService) {
         console.log("--LoginComponent---")
     }
 
     doLogin(){
-        this.loginAuthUser ={id:'',email:'',roles:''}
-        console.log(this.loginAuthUser)
-        this.onLogin.emit(this.loginAuthUser)
+        console.log(this.loginInfo)
+        this.loginService.dologin(this.loginInfo).subscribe(res => {
+            console.log(res.json())
+            var resp = <AuthResponse>res.json()
+            if(resp.code == RespCode.Success){
+                this.onLogin.emit(resp.user)
+            } else {
+                console.log($("#normalModal"))
+                this.errorMsg = resp.msg
+                $("#normalModal").modal('toggle');
+            }
+        }, error =>{
+            let errMsg = error.message || 'Server error';
+            console.error(errMsg); // log to console instead
+        })
+        this.submitted = true;
+
+    }
+
+    ngOnInit() {
+        this.loginInfo= new LoginInfo("test@163.com","111111");
     }
 
 }

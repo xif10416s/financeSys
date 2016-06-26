@@ -19,7 +19,7 @@
         <Logger name="com.hq.advertiser.data.service.impl.ScheduleServiceImpl" level="INFO">
             <AppenderRef ref="ScheduleServiceLog"/>
         </Logger>
-        <Root level="INFO">
+        <Root level="DEBUG">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>

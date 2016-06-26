@@ -41,7 +41,7 @@
 
 
     <import resource="data-config.xml"/>
-    <!--<import resource="security-context.xml"/>-->
+    <import resource="security-context.xml"/>
 
 
 </beans>
