@@ -7,4 +7,6 @@ export class AdminUser {
 
     role:string[];
 
+    name:string;
+
 }

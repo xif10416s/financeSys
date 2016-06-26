@@ -10,68 +10,70 @@
         </div>
         <div class="smart-widget-inner">
             <div class="smart-widget-body">
-                <form id="formToggleLine" class="form-horizontal no-margin form-border" (ngSubmit)="addAdminUser()" #addAdminUserForm="ngForm">
+                <form id="formToggleLine" class="form-horizontal no-margin form-border" (ngSubmit)="addAdminUser()" #addAdminUserForm="ngForm" required>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">邮箱</label>
                         <div class="col-lg-10">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <input type="email" class="form-control" [(ngModel)]="adminUser.email" ngControl="email"  placeholder="Enter email" required>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
                     <div class="form-group">
                         <label class="col-lg-2 control-label">密码</label>
                         <div class="col-lg-10">
-                            <input class="form-control" type="password" placeholder="密码">
+                            <input class="form-control" type="password" placeholder="密码" [(ngModel)]="adminUser.password" ngControl="password" required>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
                     <div class="form-group">
                         <label class="col-lg-2 control-label">手机号</label>
                         <div class="col-lg-10">
-                            <input class="form-control" type="text" placeholder="输入">
+                            <input class="form-control" type="text" placeholder="输入" [(ngModel)]="adminUser.phone" ngControl="phone" required>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
                     <div class="form-group">
                         <label class="col-lg-2 control-label">姓名</label>
                         <div class="col-lg-10">
-                            <input class="form-control" type="text" placeholder="输入">
+                            <input class="form-control" type="text" placeholder="输入" [(ngModel)]="adminUser.name" ngControl="name" required>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label">权限选择</label>
-                        <div class="col-lg-10">
-                            <div class="checkbox inline-block m-right-sm">
-                                <div class="custom-checkbox">
-                                    <input type="checkbox" id="Checkbox1" class="checkbox-grey">
-                                    <label for="Checkbox1"></label>
-                                </div>
-                                <div class="inline-block vertical-top">
-                                    loooooooooong1
-                                </div>
-                            </div>
-                            <div class="checkbox inline-block m-right-sm">
-                                <div class="custom-checkbox">
-                                    <input type="checkbox" id="Checkbox2" class="checkbox-grey" checked>
-                                    <label for="Checkbox2"></label>
-                                </div>
-                                <div class="inline-block vertical-top">
-                                    short2
-                                </div>
-                            </div>
-                            <div class="checkbox inline-block m-right-sm">
-                                <div class="custom-checkbox">
-                                    <input type="checkbox" id="Checkbox3" class="checkbox-grey" checked>
-                                    <label for="Checkbox3"></label>
-                                </div>
-                                <div class="inline-block vertical-top">
-                                    short3
-                                </div>
-                            </div>
-                        </div><!-- /.col -->
-                    </div><!-- /form-group -->
+                    <!--<div class="form-group">-->
+                        <!--<label class="col-lg-2 control-label">权限选择</label>-->
+                        <!--<div class="col-lg-10">-->
+                            <!--<div class="checkbox inline-block m-right-sm">-->
+                                <!--<div class="custom-checkbox">-->
+                                    <!--<input type="checkbox" id="Checkbox1" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role" value="ROLE_ADMIN">-->
+                                    <!--<label for="Checkbox1"></label>-->
+                                <!--</div>-->
+                                <!--<div class="inline-block vertical-top">-->
+                                    <!--系统管理员-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="checkbox inline-block m-right-sm">-->
+                                <!--<div class="custom-checkbox">-->
+                                    <!--<input type="checkbox" id="Checkbox2" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role">-->
+                                    <!--<label for="Checkbox2"></label>-->
+                                <!--</div>-->
+                                <!--<div class="inline-block vertical-top">-->
+                                    <!--运营管理员-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="checkbox inline-block m-right-sm">-->
+                                <!--<div class="custom-checkbox">-->
+                                    <!--<input type="checkbox" id="Checkbox3" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role">-->
+                                    <!--<label for="Checkbox3"></label>-->
+                                <!--</div>-->
+                                <!--<div class="inline-block vertical-top">-->
+                                    <!--商务管理员-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--{{adminUser.role}}-->
+
+                        <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; /form-group &ndash;&gt;-->
 
 
                     <div class="form-group">
                         <div class="col-lg-1 right">
-                            <a href="#" class="btn btn-danger">提交</a>
+                            <button type="submit"   class="btn btn-success block" [disabled]="!addAdminUserForm.form.valid" >提交</button>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
 

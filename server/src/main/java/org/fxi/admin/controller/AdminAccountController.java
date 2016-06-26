@@ -52,9 +52,10 @@ public class AdminAccountController extends BaseController {
         user.setPassword(requBody.getPassword());
         user.setEnabled(true);
         List<String> auths = new ArrayList<>();
-        auths.addAll(Arrays.asList(requBody.getRole()));
+//        auths.addAll(Arrays.asList(requBody.getRole()));
         user.setAuthorities(auths);
         user.setUserId(UUIDGenerator.generate());
+        user.setName(requBody.getName());
         userService.saveUser(user);
         return new Response(Response.SUCCESS);
     }

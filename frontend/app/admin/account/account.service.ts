@@ -20,7 +20,7 @@ export class AccountService {
         let options = new RequestOptions({headers: headers});
 
         console.log(body + "---------")
-        return this.http.post("spring/auth/login", body, options);
+        return this.http.post("spring/admin/addAdminUser", body, options);
     }
 
 }

@@ -12,6 +12,8 @@ public class RegisterRequest extends Request {
 
 	private String[] role;
 
+	private String name;
+
 	public String getPassword() {
 		return password;
 	}
@@ -42,5 +44,13 @@ public class RegisterRequest extends Request {
 
 	public void setRole(String[] role) {
 		this.role = role;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

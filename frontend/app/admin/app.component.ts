@@ -8,12 +8,13 @@ import {SideComponent} from './side.component'
 import {LoginComponent} from './login/login.component'
 import {AuthUser} from '../common/model/response.model'
 import {LoginService} from './login/login.service'
+import {Dialog} from '../common/component/dialog.component'
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/admin/app.component.html',
     styleUrls: ['app/admin/app.component.css'],
-    directives: [SideComponent,HeaderComponent,ROUTER_DIRECTIVES,LoginComponent],
+    directives: [SideComponent,HeaderComponent,ROUTER_DIRECTIVES,LoginComponent,Dialog],
     providers: [LoginComponent,LoginService]
 })
 
