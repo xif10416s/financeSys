@@ -3,6 +3,8 @@ import { ROUTER_DIRECTIVES ,Router} from '@angular/router';
 //===
 import {ViewItem} from '../common/model/viewitem.model'
 import {AuthUser} from '../common/model/response.model'
+import {VIEWS} from './app.routes'
+
 @Component({
     selector: 'smp-side',
     templateUrl: 'app/admin/side.component.html',
@@ -11,24 +13,11 @@ import {AuthUser} from '../common/model/response.model'
 
 export class SideComponent {
     @Input() authUser:AuthUser;
+    views = VIEWS;
     constructor(private router:Router) {
         console.log("--SideComponent---")
         this.router.navigate(['/admin.html',{}]);
     }
-
-    views = [{
-        'title': 'template',
-        'path': 'admin/account',
-        subview: [{'title': 'topic00', 'path': '/admin.html','role':['ROLE_ADMIN']}, {'title': 'back', 'path': 'account'}]
-    },{
-        'title': '账号管理',
-        'role':['ROLE_ADMIN'],
-        subview: [{'title': '新建账号', 'path': '/add-account'}, {'title': 'topic12', 'path': 'account'}]
-    }, {
-        'title': 'topic2',
-        'path': 'admin/product',
-        subview: [{'title': 'topic21', 'path': '/product'}, {'title': 'topic22', 'path': 'product','role':['ROLE_ADMIN_SP']}]
-    }]
 
 
     onSubItemViewClick(v:ViewItem) {
