@@ -35,40 +35,20 @@
                             <input class="form-control" type="text" placeholder="输入" [(ngModel)]="adminUser.name" ngControl="name" required>
                         </div><!-- /.col -->
                     </div><!-- /form-group -->
-                    <!--<div class="form-group">-->
-                        <!--<label class="col-lg-2 control-label">权限选择</label>-->
-                        <!--<div class="col-lg-10">-->
-                            <!--<div class="checkbox inline-block m-right-sm">-->
-                                <!--<div class="custom-checkbox">-->
-                                    <!--<input type="checkbox" id="Checkbox1" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role" value="ROLE_ADMIN">-->
-                                    <!--<label for="Checkbox1"></label>-->
-                                <!--</div>-->
-                                <!--<div class="inline-block vertical-top">-->
-                                    <!--系统管理员-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="checkbox inline-block m-right-sm">-->
-                                <!--<div class="custom-checkbox">-->
-                                    <!--<input type="checkbox" id="Checkbox2" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role">-->
-                                    <!--<label for="Checkbox2"></label>-->
-                                <!--</div>-->
-                                <!--<div class="inline-block vertical-top">-->
-                                    <!--运营管理员-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="checkbox inline-block m-right-sm">-->
-                                <!--<div class="custom-checkbox">-->
-                                    <!--<input type="checkbox" id="Checkbox3" class="checkbox-grey" [(ngModel)]="adminUser.role" ngControl="role">-->
-                                    <!--<label for="Checkbox3"></label>-->
-                                <!--</div>-->
-                                <!--<div class="inline-block vertical-top">-->
-                                    <!--商务管理员-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--{{adminUser.role}}-->
-
-                        <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-                    <!--</div>&lt;!&ndash; /form-group &ndash;&gt;-->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">权限选择</label>
+                        <div class="col-lg-10">
+                            <div *ngFor="let auth of AUTHS"  class="checkbox inline-block m-right-sm">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" [attr.id]="auth.value" class="checkbox-grey" [(ngModel)]="authCheckBoxes[auth.value]"  >
+                                    <label [attr.for]="auth.value"></label>
+                                </div>
+                                <div class="inline-block vertical-top">
+                                    {{auth.title}}
+                                </div>
+                            </div>
+                        </div><!-- /.col -->
+                    </div><!-- /form-group -->
 
 
                     <div class="form-group">

@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         }, error => {
             let errMsg = error.message || 'Server error';
             console.error(errMsg); // log to console instead
+            this.dialog.openDialog("出错了", "服务器出错.")
         })
         this.submitted = true;
 
